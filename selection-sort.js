@@ -15,11 +15,9 @@ function selectionSort(oldArr) {
 			if(smallestNum > oldArr[i]){
 				smallestNum = oldArr[i]
 				lastUpdate = i
-				console.log(i)
 			}
 		}
 		newArr.push(smallestNum)
-		console.log(newArr)
 		oldArr.splice(lastUpdate, 1)
 	}
 	return newArr;

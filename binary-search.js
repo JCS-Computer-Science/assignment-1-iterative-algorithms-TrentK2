@@ -7,8 +7,26 @@ function binarySearch(array, searchTerm) {
 	 ** repeat the above process for the subset of the array
 	 ** keep repeating with smaller and smaller subsets until you find the searchTerm
 	 */
-
-	return null;
+	let halfSt = 0
+	let halfEn = array.length
+	let indexST = 0
+	for (let i = 0; i < array.length; i++) {
+		let half
+		let dif = halfEn - halfSt
+		if(dif%2 != 0){
+			dif = dif-1
+		}
+		half = halfSt+dif/2
+		if(array[half] == searchTerm){
+			indexST = half
+			break
+		}
+		if(array[half] > searchTerm){
+			halfEn = half
+		} else if (array[half] < searchTerm){
+			halfSt = half
+		}
+	}
+	return indexST;
 }
-
 module.exports = binarySearch;

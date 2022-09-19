@@ -3,7 +3,7 @@ const selectionSort = require("./selection-sort");
 const bubbleSort = require("./bubble-sort");
 const linearSearch = require("./linear-search");
 const binarySearch = require("./binary-search");
-
+// to run in bash: node index.js
 const sortTestArraySize = 10;
 const sortTestArray = Array.from({ length: sortTestArraySize }, () =>
 	Math.floor(Math.random() * sortTestArraySize)
